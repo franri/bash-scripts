@@ -9,13 +9,12 @@ else
     COUNTER=0
 fi
 
-SLEEP_TIME=60
+SLEEP_TIME=3
 
 while true
 do 
 	COUNTER=$((COUNTER+1))
     DATE=$(date +%d%m%y-%H%M%S)
-    echo $ARCHIVO
 	who | while read line
     do
         TO_PRINT=$(echo $line | awk -F' ' '{print $1}')
