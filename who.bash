@@ -19,7 +19,6 @@ do
 	who | while read line
     do
         TO_PRINT=$(echo $line | awk -F' ' '{print $1}')
-        printf "%s\n" $TO_PRINT 
         ARCHIVO="usuarios-${COUNTER}-${DATE}"
         echo $TO_PRINT >> $ARCHIVO
 	done
